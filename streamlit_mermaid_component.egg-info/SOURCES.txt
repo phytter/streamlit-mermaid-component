@@ -1,11 +1,11 @@
 LICENSE
 MANIFEST.in
+README.md
 setup.py
 mermaid_component/__init__.py
 mermaid_component/frontend/build/asset-manifest.json
-mermaid_component/frontend/build/bootstrap.min.css
 mermaid_component/frontend/build/index.html
-mermaid_component/frontend/build/precache-manifest.e210e87521133584683b0a548386f628.js
+mermaid_component/frontend/build/precache-manifest.9dcfe0db9434e33bf323f083bf5e9c2d.js
 mermaid_component/frontend/build/service-worker.js
 mermaid_component/frontend/build/static/js/2.4457b02c.chunk.js
 mermaid_component/frontend/build/static/js/2.4457b02c.chunk.js.LICENSE.txt

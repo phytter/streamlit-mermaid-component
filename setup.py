@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="streamlit-mermaid-component",
-    version="0.0.2",
+    version="0.0.3",
     author="Alexandre da Silva",
     author_email="phytter@hotmail.com",
     description="A component that implements mermaid",
