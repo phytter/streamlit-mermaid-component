@@ -14,8 +14,32 @@ else:
     _mermaid_component = components.declare_component("mermaid_component", path=build_dir)
 
 
-def mermaid_component(name, style=None, key=None):
-    component_value = _mermaid_component(source=name, key=key, style=style, default=None)
+def mermaid_component(source: str ='', style: dict=None, key: str | int=None):
+    """
+        Function Description:
+            The `mermaid_component` function takes in three parameters: 
+            1. `source`: A string which represents the Mermaid graph code.
+            2. `style`: Optional parameter of type dictionary which represents the styles to be applied on the graph.
+            3. `key`: Optional parameter of type string which represents a unique key for the component.
+
+            The function then calls the `_mermaid_component` function with the provided parameters, and assigns the result
+            to the `component_value` variable. Finally, it returns the value of `component_value`.
+
+        Parameters:
+            source : str
+                A string that represents the Mermaid graph code.
+
+            style : dict, optional
+                A dictionary representing the styles to be applied on the graph.
+
+            key : str, optional
+                An optional parameter representing a unique key for the component.
+
+        Returns:
+            Any
+                The result of the `_mermaid_component` function call. This could be a HTML string or None.
+    """
+    component_value = _mermaid_component(source=source, key=key, style=style, default=None)
 
     return component_value
 
