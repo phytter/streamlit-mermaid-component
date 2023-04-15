@@ -28,14 +28,15 @@ jobs:
           node-version: '16.x'
       - name: Install dependencies
         run: |
+          npm install -g pnpm
           pip install twine
           pip install setuptools wheel
           cd mermaid_component/frontend
-          npm install
+          pnpm install
       - name: Build React project
         run: |
           cd mermaid_component/frontend
-          npm run build
+          pnpm run build
       - name: Build Python package
         run: python setup.py sdist bdist_wheel
       - name: Publish package
