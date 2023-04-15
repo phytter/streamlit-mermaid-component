@@ -6,6 +6,11 @@ import React, { ReactNode } from "react"
 // @ts-ignore
 import mermaid from 'mermaid';
 
+const treatSource = (source: string) => {
+  const index = source.indexOf("\n");
+  return index === 0 ? source.substring(index + 1) : source;
+}
+
 interface State {
   html: unknown 
 }
@@ -19,7 +24,8 @@ class MermaidComponent extends StreamlitComponentBase<State> {
       startOnLoad: true,
       theme: 'default',
     });
-    const html = await mermaid.render('mermaid-chart', args["source"]);
+    const source = treatSource(args["source"]);
+    const html = await mermaid.render('mermaid-chart', source);
     this.setState({ html });
   }
 
