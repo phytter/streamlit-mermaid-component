@@ -24,9 +24,10 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dependencies
         run: |
-          npm install
           pip install twine
           pip install setuptools wheel
+          cd mermaid_component/frontend
+          npm install
       - name: Build React project
         run: |
           cd mermaid_component/frontend
